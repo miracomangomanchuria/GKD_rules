@@ -1,0 +1,149 @@
+{
+	"id": 0,
+	"name": "自用",
+	"version": 1,
+	"author": "miraco",
+	"supportUri": "",
+	"apps": [{
+			"id": "com.ss.android.ugc.aweme.lite",
+			"name": "抖音极速版",
+			"matchLauncher": null,
+			"quickFind": null,
+			"groups": [{
+				"name": "首页-团购推荐-点击不感兴趣",
+				"key": 1,
+				"matchLauncher": null,
+				"quickFind": null,
+				"activityIds": ["com.ss.android.ugc.aweme.main.MainActivity"],
+				"rules": [{
+					"matchLauncher": null,
+					"quickFind": null,
+					"matches": ["[id$=\"eh6\"][text=\"不感兴趣\"]"]
+				}]
+			}]
+		},
+		{
+			"id": "com.idotools.qrcode",
+			"name": "多多扫描二维码",
+			"matchLauncher": null,
+			"quickFind": null,
+			"groups": [{
+				"name": "跳过首页广告",
+				"key": 1,
+				"snapshotUrls:": ["https://gkd-kit.gitee.io/snapshot/1697683646041"],
+				"quickFind": null,
+				"activityIds": ["com.idotools.qrcode.SplashActivity"],
+				"rules": [{
+					"matchLauncher": null,
+					"quickFind": null,
+					"matches": ["[id$=\"splash_skip\"]"]
+				}]
+			}, {
+				"name": "扫码页中央广告",
+				"key": 2,
+				"matchLauncher": null,
+				"quickFind": null,
+				"activityIds": ["com.idotools.qrcode.ScanActivity", "com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity"],
+				"rules": [{
+					"matchLauncher": null,
+					"snapshotUrls": "https://gkd-kit.gitee.io/snapshot/1697684166396",
+					"matches": ["[text=\"跳过\"]"]
+				}, {
+					"matchLauncher": null,
+					"snapshotUrls": "https://gkd-kit.gitee.io/snapshot/1697685417688",
+					"matches": ["@Image[text=\"\"] < View + [text=\"反馈\"] "]
+				}, {
+					"matchLauncher": null,
+					"quickFind": null,
+					"matches": ["[text=\"| 跳过\"]"]
+				}, {
+					"matchLauncher": null,
+					"snapshotUrls": "https://gkd-kit.gitee.io/snapshot/1697684418626",
+					"matches": ["[desc^=\"webview-close:\"]"]
+				}, {
+					"matchLauncher": null,
+					"quickFind": null,
+					"matches": ["[id$=\"tt_reward_full_count_down_after_close\"]"]
+				}]
+			}]
+		},
+		{
+			"id": "com.sina.weibo",
+			"name": "新浪微博",
+			"matchLauncher": null,
+			"quickFind": null,
+			"groups": [{
+				"name": "自动领取右下角阅览红包",
+				"key": 1,
+				"matchLauncher": null,
+				"quickFind": null,
+				"activityIds": ["com.sina.weibo.MainTabActivity"],
+				"rules": [{
+					"matchLauncher": null,
+					"snapshotUrls": "",
+					"matches": ["[id$=\"complete_rp_iv\"]"]
+				}]
+			}, {
+				"name": "关闭微博详情页下方推荐关注",
+				"key": 2,
+				"matchLauncher": null,
+				"quickFind": null,
+				"activityIds": ["com.sina.weibo.feed.DetailWeiboActivity"],
+				"rules": [{
+					"matchLauncher": null,
+					"snapshotUrls": "https://gkd-kit.gitee.io/snapshot/1697683282354",
+					"matches": ["[id$=\"ivClose\"]"]
+				}]
+			}]
+		}, {
+			"id": "com.apkpure.aegon",
+			"name": "APKPure",
+			"matchLauncher": null,
+			"quickFind": null,
+			"groups": [{
+				"name": "首页-屏蔽升级",
+				"key": 1,
+				"matchLauncher": null,
+				"quickFind": null,
+				"activityIds": ["com.apkmatrix.components.clientupdate.UpdateDialogActivity"],
+				"rules": [{
+					"matches": ["[id$=\"arg\"][text=\"CANCEL\"]"]
+				}]
+			}, {
+				"name": "首页-右下角转盘",
+				"key": 2,
+				"matchLauncher": null,
+				"quickFind": null,
+				"activityIds": ["com.apkpure.aegon.main.activity.MainTabActivity"],
+				"rules": [{
+					"matchLauncher": null,
+					"snapshotUrls": "https://gkd-kit.gitee.io/snapshot/1697694150000",
+					"matches": ["@ImageView[clickable=true][visibleToUser=true]"]
+				}]
+			}, {
+				"name": "首页-开屏跳过",
+				"key": 3,
+				"matchLauncher": null,
+				"quickFind": null,
+				"activityIds": ["com.apkpure.aegon.plugin.runtime.PluginDefaultProxyActivity"],
+				"rules": [{
+					"matches": ["[text=\"skip\"][id$=\"btn_close\"]"]
+				}]
+			}]
+		}, {
+			"id": "com.tencent.mm",
+			"name": "微信",
+			"matchLauncher": null,
+			"quickFind": null,
+			"groups": [{
+				"name": "微信小程序首页去广告",
+				"key": 1,
+				"activityIds": ["com.tencent.mm.plugin.appbrand.ui.AppBrandUI01"],
+				"rules": [{
+					"snapshotUrls": "https://gkd-kit.gitee.io/snapshot/1697711312047",
+					"matches": ["[id$=\"eh6\"][text=\"不感兴趣\"]"]
+				}]
+			}]
+		}
+	]
+}
